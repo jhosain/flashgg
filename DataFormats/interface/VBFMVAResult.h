@@ -84,6 +84,9 @@ namespace flashgg {
         float dnnprob_bsm_value() const {return vbfDnnResult_prob_bsm;}
         // MELA (only D0- used for categorization for now)
         float mela_D0minus_value() const {return D0minus;}
+        // MELA ggH implementation by Soumya
+        float mela_D_CP_ggH_value() const {return D_CP_ggH;}
+        float mela_D0_ggH_value() const {return D0_ggH;}
 
         // Output
         float vbfMvaResult_value;
@@ -97,6 +100,8 @@ namespace flashgg {
         float vbfDnnResult_prob_sm;
         float vbfDnnResult_prob_bsm;
         float D0minus;
+        float D_CP_ggH;
+        float D0_ggH;
     };
     
     typedef std::map<edm::Ptr<DiPhotonCandidate>, VBFMVAResult> VBFMVAResultMap;

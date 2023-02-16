@@ -66,6 +66,7 @@ namespace flashgg {
         vector<double> boundaries_pbsm;
         vector<double> boundaries_pbkg;
         vector<double> boundaries_d0m;
+        int soumya_event=0;
     };
 
     VBFTagProducer::VBFTagProducer( const ParameterSet &iConfig ) :
@@ -77,15 +78,17 @@ namespace flashgg {
         genPartToken_( consumes<View<reco::GenParticle> >( iConfig.getParameter<InputTag> ( "GenParticleTag" ) ) ),
         genJetToken_ ( consumes<View<reco::GenJet> >( iConfig.getParameter<InputTag> ( "GenJetTag" ) ) ),
         WeightToken_( consumes<vector<flashgg::PDFWeightObject> >( iConfig.getUntrackedParameter<InputTag>( "WeightTag", InputTag( "flashggPDFWeightObject" ) ) ) ),
-        systLabel_   ( iConfig.getParameter<string> ( "SystLabel" ) ),
-        dropNonGoldData_   ( iConfig.getParameter<bool> ( "DropNonGoldData" ) ),
-        setArbitraryNonGoldMC_   ( iConfig.getParameter<bool> ( "SetArbitraryNonGoldMC" ) ),
-        requireVBFPreselection_   ( iConfig.getParameter<bool> ( "RequireVBFPreselection" ) ),
+        systLabel_( iConfig.getParameter<string> ( "SystLabel" ) ),
+        dropNonGoldData_( iConfig.getParameter<bool> ( "DropNonGoldData" ) ),
+        setArbitraryNonGoldMC_( iConfig.getParameter<bool> ( "SetArbitraryNonGoldMC" ) ),
+        //requireVBFPreselection_( iConfig.getParameter<bool> ( "RequireVBFPreselection" ) ),
         getQCDWeights_( iConfig.getParameter<bool>( "GetQCDWeights" ) ),
         vbfPreselLeadPtMin_( iConfig.getParameter<double>( "VBFPreselLeadPtMin" ) ),
         vbfPreselSubleadPtMin_( iConfig.getParameter<double>( "VBFPreselSubleadPtMin" ) ),
         vbfPreselPhoIDMVAMin_( iConfig.getParameter<double>( "VBFPreselPhoIDMVAMin") )
     {
+        //useMultiClass_        =  iConfig.getParameter<bool> ("useMultiClass");
+        requireVBFPreselection_ =  iConfig.getParameter<bool> ("RequireVBFPreselection_");
         boundaries_pbsm = iConfig.getParameter<vector<double > >( "Boundaries_pbsm" );
         boundaries_pbkg = iConfig.getParameter<vector<double > >( "Boundaries_pbkg" );
         boundaries_d0m  = iConfig.getParameter<vector<double > >( "Boundaries_d0m" );
@@ -129,6 +132,7 @@ namespace flashgg {
     
     void VBFTagProducer::produce( Event &evt, const EventSetup & )
     {
+        soumya_event++;
         Handle<View<flashgg::DiPhotonCandidate> > diPhotons;
         evt.getByToken( diPhotonToken_, diPhotons );
         
@@ -165,7 +169,8 @@ namespace flashgg {
         unsigned int index_subleadq    = std::numeric_limits<unsigned int>::max();
         unsigned int index_subsubleadq = std::numeric_limits<unsigned int>::max();
         float pt_leadq = 0., pt_subleadq = 0., pt_subsubleadq = 0.;
-        
+
+        //std::cout << "vbfPreselSubleadPtMin_  = "  <<  vbfPreselSubleadPtMin_ << "vbfPreselPhoIDMVAMin_ = " << vbfPreselPhoIDMVAMin_ <<  "requireVBFPreselection_" << requireVBFPreselection_ << "setArbitraryNonGoldMC_" << setArbitraryNonGoldMC_ << std::endl;
         if( ! evt.isRealData() ) {
             evt.getByToken( genPartToken_, genParticles );
             evt.getByToken( genJetToken_, genJets );
@@ -201,7 +206,6 @@ namespace flashgg {
             edm::Ptr<flashgg::DiPhotonCandidate>      dipho           = diPhotons->ptrAt( candIndex );
             edm::Ptr<flashgg::GluGluHMVAResult>       ggh_mvares      = ggH_mvaResults->ptrAt( candIndex );
             edm::Ptr<flashgg::VHhadMVAResult>         vhHad_mvares    = VHhadMVAResults->ptrAt(candIndex);
-
             //std::cout << "vh had costheta star is: " << VHhadMVAResults->at(candIndex).cosThetaStar << std::endl;
             //std::cout << "vh had costheta star is: " << VHhadMVAResults->at(candIndex).VHhadMVAValue() << std::endl;
             
@@ -316,7 +320,6 @@ namespace flashgg {
                     tag_obj.setIsGoldMC( true );
                 }
             }
-
             if ( dropNonGoldData_ && !tag_obj.isGold() ) {
                 //                std::cout << "  VBFTagProducer has designated this event as not isGold so we drop the tag!" << std::endl;
                 continue;
@@ -326,7 +329,7 @@ namespace flashgg {
             float dnn_pbkg = tag_obj.VBFMVA().dnnprob_bkg_value();
             float d0m = tag_obj.VBFMVA().mela_D0minus_value();
             int catnum = chooseCategory(dnn_pbsm, dnn_pbkg, d0m);
-            tag_obj.setCategoryNumber( catnum );
+            //tag_obj.setCategoryNumber( catnum );
             unsigned int index_gp_leadjet = std::numeric_limits<unsigned int>::max();
             unsigned int index_gp_subleadjet = std::numeric_limits<unsigned int>::max();
             unsigned int index_gp_leadphoton = std::numeric_limits<unsigned int>::max();
@@ -575,16 +578,17 @@ namespace flashgg {
                 truth_obj.setClosestParticleToSubLeadingPhoton(genParticles->ptrAt(gpIndex2));
             }
 
-            bool VBFpresel = 1;
-            if ( requireVBFPreselection_ ) {
+         //    bool VBFpresel = 1;
+         //    if ( requireVBFPreselection_ ) {
 
-                /*
-                std::cout << "  Requiring VBF Preselection... dijet_LeadJPt=" << tag_obj.VBFMVA().dijet_LeadJPt
+                
+         /*       std::cout << "  Requiring VBF Preselection... dijet_LeadJPt=" << tag_obj.VBFMVA().dijet_LeadJPt
                           << " dijet_SubJPt=" << tag_obj.VBFMVA().dijet_SubJPt
                           << " leadPho_PToM=" << tag_obj.VBFMVA().leadPho_PToM
                           << " sublPho_PToM=" << tag_obj.VBFMVA().sublPho_PToM
                           << " dijet_Mjj=" << tag_obj.VBFMVA().dijet_Mjj << std::endl;
-                */
+         */       
+         /*
 
                 VBFpresel = ( tag_obj.VBFMVA().dijet_LeadJPt > vbfPreselLeadPtMin_ 
                               && tag_obj.VBFMVA().dijet_SubJPt > vbfPreselSubleadPtMin_ 
@@ -593,17 +597,37 @@ namespace flashgg {
                               && tag_obj.VBFMVA().leadPho_PToM > (1./3) 
                               && tag_obj.VBFMVA().sublPho_PToM > (1./4) 
                               && tag_obj.VBFMVA().dijet_Mjj > 250. );
-
-                //                std::cout << "  VBFpresel=" << VBFpresel << std::endl;
-            }
+          */
+                              //std::cout << "  VBFpresel=" << VBFpresel << std::endl;
+          //  }
 
             // saving the collection
-            if( VBFpresel && tag_obj.categoryNumber() >= 0 ) {
+            //0 jet categorization
+            if(tag_obj.VBFMVA().dijet_LeadJPt < 30.0 && tag_obj.VBFMVA().dijet_SubJPt < 30.0){
+                tag_obj.setCategoryNumber(0);
                 tags->push_back( tag_obj );
                 if( ! evt.isRealData() ) {
-                    truths->push_back( truth_obj );
-                    tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<VBFTagTruth> >( rTagTruth, idx++ ) ) );
-                }
+                             truths->push_back( truth_obj );
+                             tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<VBFTagTruth> >( rTagTruth, idx++ ) ) );
+                 }
+            }
+            //1 jet categorization
+            else if(tag_obj.VBFMVA().dijet_LeadJPt > 30.0 && tag_obj.VBFMVA().dijet_SubJPt < 30.0){
+                tag_obj.setCategoryNumber(1);
+                tags->push_back( tag_obj );
+                if( ! evt.isRealData() ) {
+                             truths->push_back( truth_obj );
+                             tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<VBFTagTruth> >( rTagTruth, idx++ ) ) );
+                 }
+            }
+            // >=2 jet categorization
+            else if(tag_obj.VBFMVA().dijet_LeadJPt > 30.0 && tag_obj.VBFMVA().dijet_SubJPt > 30.0){
+                tag_obj.setCategoryNumber(2);
+                tags->push_back( tag_obj );
+                if( ! evt.isRealData() ) {
+                             truths->push_back( truth_obj );
+                             tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<VBFTagTruth> >( rTagTruth, idx++ ) ) );
+                 }
             }
         }
 

@@ -93,7 +93,8 @@ namespace flashgg {
         float leadPho_PToM_;
         float sublPho_PToM_;
         float D0minus_;
-
+        float D_CP_ggH_;
+        float D0_ggH_;
         std::unique_ptr<Mela> mela_;
 
     };
@@ -141,22 +142,12 @@ namespace flashgg {
         dijet_subleady_   = -999.;
 
         mela_.reset(new Mela(13, 125, TVar::ERROR));
+      
+
+
         
         if (_MVAMethod == "BDTG"){
             VbfMva_.reset( new TMVA::Reader( "!Color:Silent" ) );
-            // Run 1 legacy variables
-            /*
-            VbfMva_->AddVariable( "dijet_LeadJPt"     , &dijet_LeadJPt_    );
-            VbfMva_->AddVariable( "dijet_SubJPt"      , &dijet_SubJPt_     );
-            VbfMva_->AddVariable( "dijet_abs_dEta"    , &dijet_abs_dEta_   );
-            VbfMva_->AddVariable( "dijet_Mjj"         , &dijet_Mjj_        );
-            VbfMva_->AddVariable( "dijet_Zep"         , &dijet_Zep_        );
-            VbfMva_->AddVariable( "dijet_dPhi_trunc"  , &dijet_dphi_trunc_ );
-            VbfMva_->AddVariable( "leadPho_PToM"      , &leadPho_PToM_);
-            VbfMva_->AddVariable( "sublPho_PToM"      , &sublPho_PToM_);
-            */
-            
-            // Moriond17 variables
             VbfMva_->AddVariable( "dijet_LeadJPt"          , &dijet_LeadJPt_       );
             VbfMva_->AddVariable( "dijet_SubJPt"           , &dijet_SubJPt_        );
             VbfMva_->AddVariable( "dijet_abs_dEta"         , &dijet_abs_dEta_      );
@@ -579,9 +570,36 @@ namespace flashgg {
 
                 float c_0minus = 0.297979440554;
                 D0minus_ = prob_pg1 / (prob_pg1 + c_0minus*c_0minus*prob_pg4);
-            } else D0minus_ = -999;
 
-            mvares.D0minus           = D0minus_;
+                //get the ggH + 2jets hypothesis
+                mela_->setProcess(TVar::SelfDefine_spin0, TVar::JHUGen, TVar::JJQCD);
+                mela_->selfDHggcoupl[0][gHIGGS_GG_2][0] = 1;
+                float ME_sm_ggH; mela_->computeProdP(ME_sm_ggH, false);
+
+                //get the ggH + 2jets PS hypothesis
+                mela_->setProcess(TVar::SelfDefine_spin0, TVar::JHUGen, TVar::JJQCD);
+                mela_->selfDHggcoupl[0][gHIGGS_GG_4][0] = 1;
+                float ME_ps_ggH; mela_->computeProdP(ME_ps_ggH, false);
+
+                // get the enterference term
+                mela_->setProcess(TVar::SelfDefine_spin0, TVar::JHUGen, TVar::JJQCD);
+                mela_->selfDHggcoupl[0][gHIGGS_GG_2][0] = 1;
+                mela_->selfDHggcoupl[0][gHIGGS_GG_4][0] = 1;
+                float ME_a1a3int_ggH; mela_->computeProdP(ME_a1a3int_ggH, false);
+
+                D_CP_ggH_ = (1.0062*(ME_a1a3int_ggH - (ME_sm_ggH + ME_ps_ggH)))/(ME_sm_ggH + 1.0062*1.0062*ME_ps_ggH);                 
+                D0_ggH_  = ME_sm_ggH/ ( ME_sm_ggH + ME_ps_ggH);
+
+            }
+            else 
+            {  
+                D0minus_  = -999;
+                D_CP_ggH_ = -999;
+                D0_ggH_   = -999;
+            }
+            mvares.D0minus          = D0minus_;
+            mvares.D_CP_ggH         = D_CP_ggH_;
+            mvares.D0_ggH           = D0_ggH_;
             vbf_results->push_back( mvares );
             mela_->resetInputEvent();
         }

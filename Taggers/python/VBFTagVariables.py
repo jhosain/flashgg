@@ -52,6 +52,7 @@ dipho_variables=[
 
 dijet_variables=[
     "dijet_abs_dEta         :=  abs(VBFMVA.dijet_leadEta - VBFMVA.dijet_subleadEta)",
+    "dijet_prodEta          :=  VBFMVA.dijet_leadEta * VBFMVA.dijet_subleadEta",
     "dijet_leadEta          :=  VBFMVA.dijet_leadEta    ",
     "dijet_subleadEta       :=  VBFMVA.dijet_subleadEta ",
     "dijet_leady            :=  VBFMVA.dijet_leady      ",
@@ -70,13 +71,24 @@ dijet_variables=[
     "dijet_dPhi_trunc       :=  VBFMVA.dijet_dphi_trunc ",
     "cos_dijet_dipho_dphi   :=  cos(VBFMVA.dijet_dipho_dphi)",
     "dijet_minDRJetPho      :=  VBFMVA.dijet_minDRJetPho",
+    "dijet_centrality       :=  VBFMVA.dijet_centrality_gg",
+    "dijet_zep              :=  VBFMVA.dijet_Zep",
+    "dijet_centrality_g     :=  VBFMVA.dijet_centrality_g",  
     "has3Jet                :=  hasValidVBFTriJet",
+    #MVA values
     "dijet_mva              :=  VBFMVA.VBFMVAValue",
     "dijet_mva_prob_VBF     :=  VBFMVA.vbfMvaResult_prob_VBF",
     "dijet_mva_prob_ggH     :=  VBFMVA.vbfMvaResult_prob_ggH",
     "dijet_mva_prob_bkg     :=  VBFMVA.vbfMvaResult_prob_bkg",
     "dipho_dijet_MVA        :=  VBFDiPhoDiJetMVA.VBFDiPhoDiJetMVAValue()",
     "dipho_mva              :=  diPhotonMVA.mvaValue()",
+    #not at all important for the ggH AC coupling scan
+    "vbf_dnnprob_bsm        :=  VBFMVA.dnnprob_bsm_value()",
+    "vbf_dnnprob_bkg        :=  VBFMVA.dnnprob_bkg_value()",
+    "vbf_mela_D0minus       :=  VBFMVA.mela_D0minus_value()",
+    # the ggH variables
+    "D_CP_ggH               :=  VBFMVA.mela_D_CP_ggH_value()",
+    "D0_minus_ggH           :=  VBFMVA.mela_D0_ggH_value()",
     # new variables
     "jet1_pt             := leadingJet.pt",
     "jet2_pt             := subLeadingJet.pt",
@@ -86,6 +98,17 @@ dijet_variables=[
     "jet2_eta            := subLeadingJet.eta",
     "jet3_eta            := subSubLeadingJet.eta",
     "jet4_eta            := fourthJet.eta",
+    "jet1_phi            := leadingJet.phi",
+    "jet2_phi            := subLeadingJet.phi",
+    "jet3_phi            := subSubLeadingJet.phi",
+    "jet4_phi            := fourthJet.phi",
+    "jet1_mass             := leadingJet.mass",
+    "jet2_mass             := subLeadingJet.mass",
+    "jet3_mass             := subSubLeadingJet.mass",
+    "jet4_mass             := fourthJet.mass",
+    #hadron and parton flavour
+    #please comment out at the data submission
+
     "Mjj := sqrt((leadingJet.energy+subLeadingJet.energy)^2-(leadingJet.px+subLeadingJet.px)^2-(leadingJet.py+subLeadingJet.py)^2-(leadingJet.pz+subLeadingJet.pz)^2)",
     "jet1_rawPt          := leading_rawPt",
     "jet2_rawPt          := subLeading_rawPt",

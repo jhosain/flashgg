@@ -1,0 +1,34 @@
+{
+    "cont": false, 
+    "verbose": false, 
+    "ncondorcpu": 1, 
+    "jobExe": null, 
+    "resubmit_ids": "", 
+    "njobs": 200, 
+    "resubMissing": false, 
+    "selectedDatasetPatterns": null, 
+    "hadd": true, 
+    "cmdLine": "metaConditions=$CMSSW_BASE/src/flashgg/MetaData/data/MetaConditions/Era2017_legacy_v1.json campaign=Era2017_legacy_v1_Summer20UL_v2 useAAA=True", 
+    "stageCmd": "guess", 
+    "outputDir": "test_dir_CPmix", 
+    "asyncLsf": true, 
+    "maxResub": 2, 
+    "ncpu": 10, 
+    "copy_proxy": false, 
+    "processes": {
+        "ggfhgg_CPodd": [
+            "/GluGluHToGGPlusTwoJets_CPodd_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/mukherje-Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2-dba47b1192ec1eec8f63d5c720fe8f2a/USER"
+        ]
+    }, 
+    "useTarball": false, 
+    "stageTo": "/afs/cern.ch/user/j/jhossain/eos/Hgg_AC_analysis/Flashgg/Ntuple_Production/Soumya_JetCat/Output", 
+    "__opts__": null, 
+    "hadd_dataset": false, 
+    "use_tarball": true, 
+    "__opts___src": "ggH_CPodd_jobs_2017.json", 
+    "queue": "workday", 
+    "hadd_process": true, 
+    "batchSystem": "htcondor", 
+    "output": "output.root", 
+    "lighttarball": false
+}

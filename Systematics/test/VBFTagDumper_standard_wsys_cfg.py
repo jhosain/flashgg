@@ -95,7 +95,7 @@ mva_wp = {
 process.flashggVBFTag.Boundaries             = cms.vdouble(-999.,0.62, 0.94)
 process.flashggVBFTag.SetArbitraryNonGoldMC  = cms.bool(False)
 process.flashggVBFTag.DropNonGoldData        = cms.bool(False)
-process.flashggVBFTag.RequireVBFPreselection = cms.bool(False)
+process.flashggVBFTag.RequireVBFPreselection = cms.bool(True)
 
 modifyTagSequenceForSystematics(process,jetSystematicsInputTags,dumpSysTreeMode)
 

@@ -1,0 +1,30 @@
+/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-requests/2.21.0-pafccj2/lib/python2.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.25.2) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+07-Feb-2023 06:46:18 CET  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root
+[2023-02-07 06:46:27.785091 +0100][Error  ][AsyncSock         ] [se01.indiacms.res.in:11001 #0.0] Socket error while handshaking: [FATAL] Auth failed
+[2023-02-07 06:46:27.785264 +0100][Error  ][PostMaster        ] [se01.indiacms.res.in:11001 #0] elapsed = 8, pConnectionWindow = 31 seconds.
+[2023-02-07 06:46:27.785282 +0100][Error  ][PostMaster        ] [se01.indiacms.res.in:11001 #0] Unable to recover: [FATAL] Auth failed.
+[2023-02-07 06:46:27.785297 +0100][Error  ][XRootD            ] [se01.indiacms.res.in:11001] Impossible to send message kXR_open (file: /store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+%MSG-w XrdAdaptorInternal:  file_open 07-Feb-2023 06:48:22 CET pre-events
+Failed to open file at URL root://cms-xrd-global.cern.ch:1094//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root?tried=+1213xrootd-redic.pi.infn.it,+1213xrootd-cms-redir-int.cr.cnaf.infn.it,se01.indiacms.res.in,llrxrd-redir.in2p3.fr.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 07-Feb-2023 06:50:22 CET pre-events
+Failed to open file at URL root://cms-xrd-global.cern.ch:1094//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root?tried=+1213llrxrd-redir.in2p3.fr,+1213xrootd-redic.pi.infn.it,se01.indiacms.res.in,xrootd-cms-redir-int.cr.cnaf.infn.it.
+%MSG
+----- Begin Fatal Exception 07-Feb-2023 06:50:22 CET-----------------------
+An exception of category 'FileOpenError' occurred while
+   [0] Constructing the EventProcessor
+   [1] Constructing input source of type PoolSource
+   [2] Calling RootFileSequenceBase::initTheFile()
+   [3] Calling StorageFactory::open()
+   [4] Calling XrdFile::open()
+Exception Message:
+Failed to open the file 'root://cms-xrd-global.cern.ch//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root'
+   Additional Info:
+      [a] Input file root://cms-xrd-global.cern.ch//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root could not be opened.
+      [b] XrdCl::File::Open(name='root://cms-xrd-global.cern.ch//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root', flags=0x10, permissions=0660) => error '[ERROR] Server responded with an error: [3011] No servers are available to read the file.
+' (errno=3011, code=400). No additional data servers were found.
+      [c] Last URL tried: root://cms-xrd-global.cern.ch:1094//store/user/mukherje/Era2017_legacy_v1_Summer20UL/v0/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/Era2017_legacy_v1_Summer20UL-v0-v0-RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/230120_162808/0000/myMicroAODOutputFile_461.root?tried=+1213llrxrd-redir.in2p3.fr,+1213xrootd-redic.pi.infn.it,se01.indiacms.res.in,xrootd-cms-redir-int.cr.cnaf.infn.it
+      [d] Problematic data server: cms-xrd-global.cern.ch:1094
+      [e] Disabled source: cms-xrd-global.cern.ch:1094
+----- End Fatal Exception -------------------------------------------------
