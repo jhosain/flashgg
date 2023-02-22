@@ -1,3 +1,6 @@
+
+//Include object formats (corresponding to MicroAOD content)
+
 #ifndef FLASHgg_WHLeptonicTag_h
 #define FLASHgg_WHLeptonicTag_h
 
@@ -10,6 +13,8 @@
 
 namespace flashgg {
 
+//  Inherit diphoton format (default store diphoton info)
+
     class WHLeptonicTag: public DiPhotonTagBase
     {
     public:
@@ -20,23 +25,24 @@ namespace flashgg {
 
         WHLeptonicTag *clone() const override { return ( new WHLeptonicTag( *this ) ); }
 
+        // Output objects (jets, muons, electrons, Met) information to dumper module
         const std::vector<edm::Ptr<Muon> > muons() const { return Muons_;}
         const std::vector<edm::Ptr<flashgg::Electron> > electrons() const {return Electrons_;}
         const std::vector<edm::Ptr<Jet> > jets() const { return Jets_;}
         const edm::Ptr<flashgg::Met> met() const { return MET_;}
-
+        /////////////////////////////////////////////////////////////////////////////////////////////
         const bool associatedZ() const { return associatedZ_; }
         const bool associatedW() const { return associatedW_; }
         const bool VhasNeutrinos() const { return VhasNeutrinos_; }
         const bool VhasLeptons() const { return VhasLeptons_; }
         const bool VhasHadrons() const { return VhasHadrons_; }
         const float Vpt() const { return Vpt_; }
-
+        // Input objects (jets, muons, electrons, Met) information from EDM producer
         void setJets( std::vector<edm::Ptr<Jet> > Jets ) { Jets_ = Jets; }
         void setMuons( std::vector<edm::Ptr<Muon> >Muons ) {Muons_ = Muons;}
         void setMET( edm::Ptr<flashgg::Met>  MET ) {MET_ = MET;}
         void setElectrons( std::vector<edm::Ptr<Electron> > Electrons ) {Electrons_ = Electrons;}
-
+        /////////////////////////////////////////////////////////////////////////////////////////////
         void setAssociatedZ( const bool &val ) { associatedZ_ = val; }
         void setAssociatedW( const bool &val ) { associatedW_ = val; }
         void setVhasNeutrinos( const bool &val ) { VhasNeutrinos_ = val; }

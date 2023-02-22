@@ -48,7 +48,10 @@ namespace flashgg {
         vbfDnnResult_prob_sm   ( -9999. ),
         vbfDnnResult_prob_bsm  ( -9999. ),
         
-        D0minus                ( -9999. )
+        D0minus                ( -9999. ),
+        D_CP_ggH                 ( -9999. ),
+        D0_ggH               ( -9999. )
+
     {}
     
     VBFMVAResult::VBFMVAResult( edm::Ptr<VBFMVAResult> x )
@@ -112,6 +115,9 @@ namespace flashgg {
         vbfDnnResult_prob_bsm   = x->vbfDnnResult_prob_bsm;
 
         D0minus                 = x->D0minus;
+        D_CP_ggH                = x->D_CP_ggH;
+        D0_ggH                  = x->D0_ggH;
+
     }
 }
 // Local Variables:

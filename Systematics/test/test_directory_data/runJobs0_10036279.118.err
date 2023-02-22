@@ -1,0 +1,443 @@
+Could not find platform independent libraries <prefix>
+Could not find platform dependent libraries <exec_prefix>
+Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+ImportError: No module named site
+/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-requests/2.21.0-pafccj2/lib/python2.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.25.2) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+04-Oct-2022 06:08:24 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1298.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:08:27 CEST pre-events
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-02
+%MSG
+04-Oct-2022 06:09:36 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1298.root
+[2022-10-04 06:10:21.888786 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:10:21.888953 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 45, pConnectionWindow = 31 seconds.
+[2022-10-04 06:11:06.119865 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:11:06.119962 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 45, pConnectionWindow = 31 seconds.
+[2022-10-04 06:11:06.119990 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2022-10-04 06:11:06.120015 +0200][Error  ][XRootD            ] [xrootd.ba.infn.it:1094] Impossible to send message kXR_open (file: /store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1298.root?tried=stor73.datagrid.cea.fr,node12.datagrid.cea.fr,xrootd-redic.pi.infn.it&triedrc=enoent, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type MELAParticle
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type MELAThreeBodyDecayCandidate
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type MELACandidate
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELALinearInterpFunc.h
+   requested to autoload type MELALinearInterpFunc
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_1D.h
+   requested to autoload type MELANCSplineCore
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_1D.h
+   requested to autoload type MELANCSpline_1D_fast
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_1D.h
+   requested to autoload type MELAFuncPdf
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_1D.h
+   requested to autoload type MELANCSplineFactory_1D
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_2D.h
+   requested to autoload type MELANCSpline_2D_fast
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_2D.h
+   requested to autoload type MELANCSplineFactory_2D
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_3D.h
+   requested to autoload type MELANCSpline_3D_fast
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for MELANCSplineFactory_3D.h
+   requested to autoload type MELANCSplineFactory_3D
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type SpinZeroCouplings
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type SpinOneCouplings
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type SpinTwoCouplings
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type VprimeCouplings
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type MelaIO
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type TEvtProb
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for Mela.h
+   requested to autoload type Mela
+Error in cling::AutoloadingVisitor::InsertIntoAutoloadingState:
+   Missing FileEntry for ZZMatrixElement.h
+   requested to autoload type ZZMatrixElement
+Begin processing the 1st record. Run 297359, Event 21554634, LumiSection 53 on stream 0 at 04-Oct-2022 06:48:45.758 CEST
+Begin processing the 1001st record. Run 297359, Event 21917061, LumiSection 53 on stream 0 at 04-Oct-2022 06:48:57.923 CEST
+Begin processing the 2001st record. Run 297359, Event 23346883, LumiSection 54 on stream 0 at 04-Oct-2022 06:49:07.414 CEST
+Begin processing the 3001st record. Run 297665, Event 2393542, LumiSection 2 on stream 0 at 04-Oct-2022 06:49:14.088 CEST
+Begin processing the 4001st record. Run 297665, Event 3694973, LumiSection 3 on stream 0 at 04-Oct-2022 06:49:21.383 CEST
+Begin processing the 5001st record. Run 297665, Event 38225371, LumiSection 23 on stream 0 at 04-Oct-2022 06:49:28.460 CEST
+[2022-10-04 06:49:29.080980 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:49:29.081106 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 45, pConnectionWindow = 31 seconds.
+Begin processing the 6001st record. Run 297665, Event 57507794, LumiSection 34 on stream 0 at 04-Oct-2022 06:49:35.107 CEST
+Begin processing the 7001st record. Run 297665, Event 59429223, LumiSection 35 on stream 0 at 04-Oct-2022 06:49:42.313 CEST
+04-Oct-2022 06:49:48 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1298.root
+04-Oct-2022 06:49:48 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1673.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:49:51 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:49:51 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1673.root
+Begin processing the 8001st record. Run 297488, Event 331445619, LumiSection 297 on stream 0 at 04-Oct-2022 06:49:54.297 CEST
+Begin processing the 9001st record. Run 297488, Event 347077908, LumiSection 311 on stream 0 at 04-Oct-2022 06:50:00.232 CEST
+Begin processing the 10001st record. Run 297488, Event 348358398, LumiSection 313 on stream 0 at 04-Oct-2022 06:50:06.621 CEST
+Begin processing the 11001st record. Run 297488, Event 350601769, LumiSection 315 on stream 0 at 04-Oct-2022 06:50:12.171 CEST
+[2022-10-04 06:50:14.650008 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:50:14.650117 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 45, pConnectionWindow = 31 seconds.
+[2022-10-04 06:50:14.650146 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2022-10-04 06:50:14.650163 +0200][Error  ][XRootD            ] [xrootd.ba.infn.it:1094] Impossible to send message kXR_open (file: /store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1298.root?tried=+1213xrootd-cms-redir-int.cr.cnaf.infn.it,+1413xrootd-cms-redir-int.cr.cnaf.infn.it,+1413llrxrd-redir.in2p3.fr,stor73.datagrid.cea.fr,node12.datagrid.cea.fr,xrootd-redic.pi.infn.it&triedrc=enoent, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2022-10-04 06:50:14.650271 +0200][Error  ][XRootD            ] [xrootd.ba.infn.it:1094] Impossible to send message kXR_open (file: /store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1673.root?tried=stor82.datagrid.cea.fr,node12.datagrid.cea.fr,xrootd-redic.pi.infn.it&triedrc=enoent, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+Begin processing the 12001st record. Run 297488, Event 352651358, LumiSection 317 on stream 0 at 04-Oct-2022 06:50:17.976 CEST
+04-Oct-2022 06:50:21 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1673.root
+04-Oct-2022 06:50:21 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1311.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:50:23 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:50:23 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1311.root
+Begin processing the 13001st record. Run 297359, Event 240054122, LumiSection 170 on stream 0 at 04-Oct-2022 06:50:28.416 CEST
+Begin processing the 14001st record. Run 297359, Event 241203001, LumiSection 171 on stream 0 at 04-Oct-2022 06:50:36.439 CEST
+Begin processing the 15001st record. Run 297359, Event 243408887, LumiSection 172 on stream 0 at 04-Oct-2022 06:50:42.962 CEST
+Begin processing the 16001st record. Run 297359, Event 244369756, LumiSection 173 on stream 0 at 04-Oct-2022 06:50:50.504 CEST
+Begin processing the 17001st record. Run 297359, Event 246351436, LumiSection 174 on stream 0 at 04-Oct-2022 06:50:57.664 CEST
+Begin processing the 18001st record. Run 297359, Event 247089169, LumiSection 175 on stream 0 at 04-Oct-2022 06:51:05.317 CEST
+Begin processing the 19001st record. Run 297359, Event 249814290, LumiSection 176 on stream 0 at 04-Oct-2022 06:51:11.926 CEST
+Begin processing the 20001st record. Run 297359, Event 250684577, LumiSection 177 on stream 0 at 04-Oct-2022 06:51:19.060 CEST
+Begin processing the 21001st record. Run 297411, Event 78370463, LumiSection 75 on stream 0 at 04-Oct-2022 06:51:26.299 CEST
+04-Oct-2022 06:51:31 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1311.root
+04-Oct-2022 06:51:31 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0002/myMicroAODOutputFile_2348.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:51:33 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:51:33 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0002/myMicroAODOutputFile_2348.root
+Begin processing the 22001st record. Run 299067, Event 223677128, LumiSection 178 on stream 0 at 04-Oct-2022 06:51:36.377 CEST
+Begin processing the 23001st record. Run 299067, Event 226354010, LumiSection 180 on stream 0 at 04-Oct-2022 06:51:41.876 CEST
+Begin processing the 24001st record. Run 299067, Event 227658745, LumiSection 181 on stream 0 at 04-Oct-2022 06:51:47.984 CEST
+Begin processing the 25001st record. Run 299067, Event 231410920, LumiSection 183 on stream 0 at 04-Oct-2022 06:51:55.175 CEST
+Begin processing the 26001st record. Run 299067, Event 233498458, LumiSection 185 on stream 0 at 04-Oct-2022 06:52:01.039 CEST
+Begin processing the 27001st record. Run 299067, Event 236650230, LumiSection 187 on stream 0 at 04-Oct-2022 06:52:07.071 CEST
+04-Oct-2022 06:52:08 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0002/myMicroAODOutputFile_2348.root
+04-Oct-2022 06:52:08 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_119.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:52:10 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:52:10 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_119.root
+Begin processing the 28001st record. Run 297057, Event 34348781, LumiSection 25 on stream 0 at 04-Oct-2022 06:52:17.175 CEST
+Begin processing the 29001st record. Run 297057, Event 76661177, LumiSection 56 on stream 0 at 04-Oct-2022 06:52:23.724 CEST
+Begin processing the 30001st record. Run 297057, Event 98992566, LumiSection 73 on stream 0 at 04-Oct-2022 06:52:30.304 CEST
+Begin processing the 31001st record. Run 297057, Event 106765973, LumiSection 79 on stream 0 at 04-Oct-2022 06:52:36.673 CEST
+04-Oct-2022 06:52:42 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_119.root
+04-Oct-2022 06:52:42 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_573.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:52:44 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:52:44 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_573.root
+Begin processing the 32001st record. Run 299184, Event 388614737, LumiSection 243 on stream 0 at 04-Oct-2022 06:52:46.599 CEST
+Begin processing the 33001st record. Run 299184, Event 390639087, LumiSection 244 on stream 0 at 04-Oct-2022 06:52:53.502 CEST
+Begin processing the 34001st record. Run 299184, Event 394362674, LumiSection 246 on stream 0 at 04-Oct-2022 06:53:00.057 CEST
+Begin processing the 35001st record. Run 299184, Event 395499377, LumiSection 247 on stream 0 at 04-Oct-2022 06:53:06.382 CEST
+Begin processing the 36001st record. Run 299184, Event 402111160, LumiSection 250 on stream 0 at 04-Oct-2022 06:53:12.330 CEST
+Begin processing the 37001st record. Run 299184, Event 677231372, LumiSection 407 on stream 0 at 04-Oct-2022 06:53:19.377 CEST
+04-Oct-2022 06:53:25 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_573.root
+04-Oct-2022 06:53:25 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_229.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:53:28 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:53:28 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_229.root
+Begin processing the 38001st record. Run 297057, Event 883131660, LumiSection 754 on stream 0 at 04-Oct-2022 06:53:30.337 CEST
+Begin processing the 39001st record. Run 297057, Event 885272711, LumiSection 756 on stream 0 at 04-Oct-2022 06:53:36.395 CEST
+Begin processing the 40001st record. Run 297057, Event 888211887, LumiSection 759 on stream 0 at 04-Oct-2022 06:53:43.526 CEST
+Begin processing the 41001st record. Run 297057, Event 854097806, LumiSection 726 on stream 0 at 04-Oct-2022 06:53:50.136 CEST
+04-Oct-2022 06:53:54 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_229.root
+04-Oct-2022 06:53:54 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_425.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:53:56 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:53:56 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_425.root
+Begin processing the 42001st record. Run 297101, Event 1106755932, LumiSection 895 on stream 0 at 04-Oct-2022 06:53:59.904 CEST
+Begin processing the 43001st record. Run 297101, Event 1124070801, LumiSection 911 on stream 0 at 04-Oct-2022 06:54:06.005 CEST
+Begin processing the 44001st record. Run 299000, Event 28016952, LumiSection 32 on stream 0 at 04-Oct-2022 06:54:12.487 CEST
+Begin processing the 45001st record. Run 299000, Event 30213759, LumiSection 34 on stream 0 at 04-Oct-2022 06:54:19.948 CEST
+[2022-10-04 06:54:23.963167 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:54:23.963284 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 45, pConnectionWindow = 31 seconds.
+04-Oct-2022 06:54:27 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_425.root
+04-Oct-2022 06:54:27 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1578.root
+[2022-10-04 06:55:08.977749 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:55:08.977842 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 45, pConnectionWindow = 31 seconds.
+[2022-10-04 06:55:08.977852 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2022-10-04 06:55:08.977861 +0200][Error  ][XRootD            ] [xrootd.ba.infn.it:1094] Impossible to send message kXR_open (file: /store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_229.root?tried=stor80.datagrid.cea.fr, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2022-10-04 06:55:08.977939 +0200][Error  ][XRootD            ] [xrootd.ba.infn.it:1094] Impossible to send message kXR_open (file: /store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_425.root?tried=+1213xrootd-cms-redir-int.cr.cnaf.infn.it,+1413xrootd-cms-redir-int.cr.cnaf.infn.it,stor82.datagrid.cea.fr,node12.datagrid.cea.fr,xrootd-redic.pi.infn.it&triedrc=enoent, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2022-10-04 06:55:08.977991 +0200][Error  ][XRootD            ] [xrootd.ba.infn.it:1094] Impossible to send message kXR_open (file: /store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1578.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:55:10 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:55:10 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1578.root
+Begin processing the 46001st record. Run 297562, Event 345225381, LumiSection 213 on stream 0 at 04-Oct-2022 06:55:12.318 CEST
+Begin processing the 47001st record. Run 297562, Event 346604759, LumiSection 214 on stream 0 at 04-Oct-2022 06:55:19.400 CEST
+Begin processing the 48001st record. Run 297484, Event 364558689, LumiSection 192 on stream 0 at 04-Oct-2022 06:55:26.361 CEST
+Begin processing the 49001st record. Run 297484, Event 376983248, LumiSection 199 on stream 0 at 04-Oct-2022 06:55:33.863 CEST
+Begin processing the 50001st record. Run 297484, Event 378196276, LumiSection 200 on stream 0 at 04-Oct-2022 06:55:40.963 CEST
+Begin processing the 51001st record. Run 297484, Event 380876105, LumiSection 201 on stream 0 at 04-Oct-2022 06:55:48.181 CEST
+Begin processing the 52001st record. Run 297484, Event 382365399, LumiSection 202 on stream 0 at 04-Oct-2022 06:55:54.438 CEST
+Begin processing the 53001st record. Run 297484, Event 384839627, LumiSection 203 on stream 0 at 04-Oct-2022 06:56:01.337 CEST
+Begin processing the 54001st record. Run 297484, Event 385317641, LumiSection 204 on stream 0 at 04-Oct-2022 06:56:08.784 CEST
+04-Oct-2022 06:56:09 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1578.root
+04-Oct-2022 06:56:09 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_179.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:56:11 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:56:11 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_179.root
+Begin processing the 55001st record. Run 297431, Event 88554272, LumiSection 49 on stream 0 at 04-Oct-2022 06:56:19.395 CEST
+Begin processing the 56001st record. Run 297431, Event 109261481, LumiSection 61 on stream 0 at 04-Oct-2022 06:56:26.530 CEST
+Begin processing the 57001st record. Run 297431, Event 111787314, LumiSection 62 on stream 0 at 04-Oct-2022 06:56:33.275 CEST
+Begin processing the 58001st record. Run 297431, Event 115762207, LumiSection 64 on stream 0 at 04-Oct-2022 06:56:39.417 CEST
+Begin processing the 59001st record. Run 297431, Event 134441909, LumiSection 74 on stream 0 at 04-Oct-2022 06:56:45.862 CEST
+Begin processing the 60001st record. Run 297431, Event 138737266, LumiSection 76 on stream 0 at 04-Oct-2022 06:56:51.467 CEST
+Begin processing the 61001st record. Run 297431, Event 140534524, LumiSection 77 on stream 0 at 04-Oct-2022 06:56:58.235 CEST
+04-Oct-2022 06:57:01 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0000/myMicroAODOutputFile_179.root
+04-Oct-2022 06:57:01 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1854.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:57:04 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:57:04 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1854.root
+Begin processing the 62001st record. Run 297557, Event 307327628, LumiSection 189 on stream 0 at 04-Oct-2022 06:57:09.082 CEST
+Begin processing the 63001st record. Run 297557, Event 308513589, LumiSection 190 on stream 0 at 04-Oct-2022 06:57:17.799 CEST
+Begin processing the 64001st record. Run 297503, Event 1270287961, LumiSection 698 on stream 0 at 04-Oct-2022 06:57:25.126 CEST
+Begin processing the 65001st record. Run 297503, Event 1273211770, LumiSection 700 on stream 0 at 04-Oct-2022 06:57:30.833 CEST
+Begin processing the 66001st record. Run 297503, Event 1274956606, LumiSection 701 on stream 0 at 04-Oct-2022 06:57:37.004 CEST
+Begin processing the 67001st record. Run 297503, Event 1296876261, LumiSection 714 on stream 0 at 04-Oct-2022 06:57:43.491 CEST
+Begin processing the 68001st record. Run 297503, Event 1299747879, LumiSection 715 on stream 0 at 04-Oct-2022 06:57:49.597 CEST
+Begin processing the 69001st record. Run 297503, Event 1302180565, LumiSection 717 on stream 0 at 04-Oct-2022 06:57:56.377 CEST
+04-Oct-2022 06:57:59 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1854.root
+04-Oct-2022 06:57:59 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1590.root
+%MSG-w XrdAdaptor:  file_open 04-Oct-2022 06:58:01 CEST PostProcessEvent
+Data is served from GRIF-IRFU instead of original site CERN-CMSGLOBAL-01
+%MSG
+04-Oct-2022 06:58:01 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1590.root
+Begin processing the 70001st record. Run 297485, Event 144711537, LumiSection 83 on stream 0 at 04-Oct-2022 06:58:07.691 CEST
+Begin processing the 71001st record. Run 297485, Event 146508799, LumiSection 84 on stream 0 at 04-Oct-2022 06:58:15.322 CEST
+Begin processing the 72001st record. Run 297485, Event 154479466, LumiSection 88 on stream 0 at 04-Oct-2022 06:58:20.878 CEST
+Begin processing the 73001st record. Run 297485, Event 157437049, LumiSection 90 on stream 0 at 04-Oct-2022 06:58:28.017 CEST
+Begin processing the 74001st record. Run 297485, Event 127324248, LumiSection 73 on stream 0 at 04-Oct-2022 06:58:35.099 CEST
+Begin processing the 75001st record. Run 297485, Event 130022377, LumiSection 74 on stream 0 at 04-Oct-2022 06:58:41.542 CEST
+Begin processing the 76001st record. Run 297485, Event 130526457, LumiSection 75 on stream 0 at 04-Oct-2022 06:58:48.604 CEST
+Begin processing the 77001st record. Run 297485, Event 148679575, LumiSection 85 on stream 0 at 04-Oct-2022 06:58:55.963 CEST
+[2022-10-04 06:58:59.029776 +0200][Error  ][AsyncSock         ] [xrootd.ba.infn.it:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2022-10-04 06:58:59.029906 +0200][Error  ][PostMaster        ] [xrootd.ba.infn.it:1094 #0] elapsed = 46, pConnectionWindow = 31 seconds.
+Begin processing the 78001st record. Run 297485, Event 150115768, LumiSection 86 on stream 0 at 04-Oct-2022 06:59:03.965 CEST
+04-Oct-2022 06:59:06 CEST  Closed file root://cms-xrd-global.cern.ch//store/user/alesauva/flashgg/UL2017_test/10_6_4/DoubleEG/UL_test-10_6_4-v0-Run2017B-09Aug2019_UL2017-v1/200814_075626/0001/myMicroAODOutputFile_1590.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 78315 passed = 46224 failed = 32091
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     1    0      78315      46224      32091          0 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0      78315      46236      32079          0 hltHighLevel
+TrigReport     1    1      46236      46224         12          0 flashggMetFilters
+TrigReport     1    2      46224      46224          0          0 flashggDifferentialPhoIdInputsCorrection
+TrigReport     1    3      46224      46224          0          0 flashggDiPhotonSystematics
+TrigReport     1    4      46224      46224          0          0 flashggMetSystematics
+TrigReport     1    5      46224      46224          0          0 flashggMuonSystematics
+TrigReport     1    6      46224      46224          0          0 flashggElectronSystematics
+TrigReport     1    7      46224      46224          0          0 flashggUnpackedJets
+TrigReport     1    8      46224      46224          0          0 flashggJetSystematics0
+TrigReport     1    9      46224      46224          0          0 flashggJetSystematics1
+TrigReport     1   10      46224      46224          0          0 flashggJetSystematics2
+TrigReport     1   11      46224      46224          0          0 flashggJetSystematics3
+TrigReport     1   12      46224      46224          0          0 flashggJetSystematics4
+TrigReport     1   13      46224      46224          0          0 flashggJetSystematics5
+TrigReport     1   14      46224      46224          0          0 flashggJetSystematics6
+TrigReport     1   15      46224      46224          0          0 flashggJetSystematics7
+TrigReport     1   16      46224      46224          0          0 flashggJetSystematics8
+TrigReport     1   17      46224      46224          0          0 flashggJetSystematics9
+TrigReport     1   18      46224      46224          0          0 flashggJetSystematics10
+TrigReport     1   19      46224      46224          0          0 flashggJetSystematics11
+TrigReport     1   20      46224      46224          0          0 flashggPrefireDiPhotons
+TrigReport     1   21      46224      46224          0          0 flashggPreselectedDiPhotons
+TrigReport     1   22      46224      46224          0          0 flashggDiPhotonMVA
+TrigReport     1   23      46224      46224          0          0 flashggVBFMVA
+TrigReport     1   24      46224      46224          0          0 flashggVHhadMVA
+TrigReport     1   25      46224      46224          0          0 flashggGluGluHMVA
+TrigReport     1   26      46224      46224          0          0 flashggVBFDiPhoDiJetMVA
+TrigReport     1   27      46224      46224          0          0 flashggVBFTag
+TrigReport     1   28      46224      46224          0          0 flashggTagSorter
+TrigReport     1   29      46224      46224          0          0 flashggSystTagMerger
+TrigReport     1   30      46224      46224          0          0 tagsDumper
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited   Executed     Passed     Failed      Error Name
+TrigReport      78315      78315      78315          0          0 TriggerResults
+TrigReport      46224      46224      46224          0          0 ak4PFCHSL1FastL2L3ResidualCorrector
+TrigReport      46224      46224      46224          0          0 ak4PFCHSL1FastjetCorrector
+TrigReport      46224      46224      46224          0          0 ak4PFCHSL2RelativeCorrector
+TrigReport      46224      46224      46224          0          0 ak4PFCHSL3AbsoluteCorrector
+TrigReport      46224      46224      46224          0          0 ak4PFCHSResidualCorrector
+TrigReport      46224      46224      46224          0          0 flashggDiPhotonMVA
+TrigReport      46224      46224      46224          0          0 flashggDiPhotonSystematics
+TrigReport      46224      46224      46224          0          0 flashggDifferentialPhoIdInputsCorrection
+TrigReport      46224      46224      46224          0          0 flashggElectronSystematics
+TrigReport      46224      46224      46224          0          0 flashggGluGluHMVA
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics0
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics1
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics10
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics11
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics2
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics3
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics4
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics5
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics6
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics7
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics8
+TrigReport      46224      46224      46224          0          0 flashggJetSystematics9
+TrigReport      46236      46236      46224         12          0 flashggMetFilters
+TrigReport      46224      46224      46224          0          0 flashggMetSystematics
+TrigReport      46224      46224      46224          0          0 flashggMuonSystematics
+TrigReport      46224      46224      46224          0          0 flashggPrefireDiPhotons
+TrigReport      46224      46224      46224          0          0 flashggPreselectedDiPhotons
+TrigReport      46224      46224      46224          0          0 flashggSystTagMerger
+TrigReport      46224      46224      46224          0          0 flashggTagSorter
+TrigReport      46224      46224      46224          0          0 flashggUnpackedJets
+TrigReport      46224      46224      46224          0          0 flashggVBFDiPhoDiJetMVA
+TrigReport      46224      46224      46224          0          0 flashggVBFMVA
+TrigReport      46224      46224      46224          0          0 flashggVBFTag
+TrigReport      46224      46224      46224          0          0 flashggVHhadMVA
+TrigReport      78315      78315      46236      32079          0 hltHighLevel
+TrigReport      78315      78315      78315          0          0 p
+TrigReport      46224      46224      46224          0          0 tagsDumper
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport       event loop CPU/event = 0.006860
+TimeReport      event loop Real/event = 0.007955
+TimeReport     sum Streams Real/event = 0.006215
+TimeReport efficiency CPU/Real/thread = 0.862407
+
+TimeReport ---------- Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.005836     0.005836  p
+TimeReport  per event     per exec  Name
+
+TimeReport -------End-Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport  per event     per exec  Name
+
+TimeReport ---------- Modules in Path: p ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000005     0.000005  hltHighLevel
+TimeReport   0.000012     0.000021  flashggMetFilters
+TimeReport   0.002323     0.003935  flashggDifferentialPhoIdInputsCorrection
+TimeReport   0.000685     0.001161  flashggDiPhotonSystematics
+TimeReport   0.000110     0.000187  flashggMetSystematics
+TimeReport   0.000005     0.000009  flashggMuonSystematics
+TimeReport   0.000023     0.000040  flashggElectronSystematics
+TimeReport   0.000146     0.000248  flashggUnpackedJets
+TimeReport   0.000266     0.000450  flashggJetSystematics0
+TimeReport   0.000036     0.000062  flashggJetSystematics1
+TimeReport   0.000030     0.000051  flashggJetSystematics2
+TimeReport   0.000029     0.000049  flashggJetSystematics3
+TimeReport   0.000028     0.000048  flashggJetSystematics4
+TimeReport   0.000028     0.000047  flashggJetSystematics5
+TimeReport   0.000027     0.000046  flashggJetSystematics6
+TimeReport   0.000027     0.000046  flashggJetSystematics7
+TimeReport   0.000027     0.000046  flashggJetSystematics8
+TimeReport   0.000027     0.000045  flashggJetSystematics9
+TimeReport   0.000026     0.000045  flashggJetSystematics10
+TimeReport   0.000026     0.000045  flashggJetSystematics11
+TimeReport   0.000476     0.000807  flashggPrefireDiPhotons
+TimeReport   0.000046     0.000078  flashggPreselectedDiPhotons
+TimeReport   0.000006     0.000010  flashggDiPhotonMVA
+TimeReport   0.000013     0.000022  flashggVBFMVA
+TimeReport   0.000006     0.000010  flashggVHhadMVA
+TimeReport   0.000011     0.000018  flashggGluGluHMVA
+TimeReport   0.000007     0.000012  flashggVBFDiPhoDiJetMVA
+TimeReport   0.000009     0.000016  flashggVBFTag
+TimeReport   0.000030     0.000051  flashggTagSorter
+TimeReport   0.000002     0.000003  flashggSystTagMerger
+TimeReport   0.000030     0.000051  tagsDumper
+TimeReport  per event    per visit  Name
+
+TimeReport ---------- Module Summary ---[Real sec]----
+TimeReport  per event     per exec    per visit  Name
+TimeReport   0.000003     0.000003     0.000003  TriggerResults
+TimeReport   0.000002     0.000004     0.000004  ak4PFCHSL1FastL2L3ResidualCorrector
+TimeReport   0.000002     0.000004     0.000004  ak4PFCHSL1FastjetCorrector
+TimeReport   0.000001     0.000002     0.000002  ak4PFCHSL2RelativeCorrector
+TimeReport   0.000001     0.000002     0.000002  ak4PFCHSL3AbsoluteCorrector
+TimeReport   0.000006     0.000010     0.000010  ak4PFCHSResidualCorrector
+TimeReport   0.000006     0.000010     0.000010  flashggDiPhotonMVA
+TimeReport   0.000685     0.001161     0.001161  flashggDiPhotonSystematics
+TimeReport   0.002323     0.003935     0.003935  flashggDifferentialPhoIdInputsCorrection
+TimeReport   0.000023     0.000040     0.000040  flashggElectronSystematics
+TimeReport   0.000011     0.000018     0.000018  flashggGluGluHMVA
+TimeReport   0.000266     0.000450     0.000450  flashggJetSystematics0
+TimeReport   0.000036     0.000062     0.000062  flashggJetSystematics1
+TimeReport   0.000026     0.000045     0.000045  flashggJetSystematics10
+TimeReport   0.000026     0.000045     0.000045  flashggJetSystematics11
+TimeReport   0.000030     0.000051     0.000051  flashggJetSystematics2
+TimeReport   0.000029     0.000049     0.000049  flashggJetSystematics3
+TimeReport   0.000028     0.000048     0.000048  flashggJetSystematics4
+TimeReport   0.000028     0.000047     0.000047  flashggJetSystematics5
+TimeReport   0.000027     0.000046     0.000046  flashggJetSystematics6
+TimeReport   0.000027     0.000046     0.000046  flashggJetSystematics7
+TimeReport   0.000027     0.000046     0.000046  flashggJetSystematics8
+TimeReport   0.000027     0.000045     0.000045  flashggJetSystematics9
+TimeReport   0.000012     0.000021     0.000021  flashggMetFilters
+TimeReport   0.000110     0.000187     0.000187  flashggMetSystematics
+TimeReport   0.000005     0.000009     0.000009  flashggMuonSystematics
+TimeReport   0.000476     0.000807     0.000807  flashggPrefireDiPhotons
+TimeReport   0.000046     0.000078     0.000078  flashggPreselectedDiPhotons
+TimeReport   0.000002     0.000003     0.000003  flashggSystTagMerger
+TimeReport   0.000030     0.000051     0.000051  flashggTagSorter
+TimeReport   0.000146     0.000248     0.000248  flashggUnpackedJets
+TimeReport   0.000007     0.000012     0.000012  flashggVBFDiPhoDiJetMVA
+TimeReport   0.000013     0.000022     0.000022  flashggVBFMVA
+TimeReport   0.000009     0.000016     0.000016  flashggVBFTag
+TimeReport   0.000006     0.000010     0.000010  flashggVHhadMVA
+TimeReport   0.000005     0.000005     0.000005  hltHighLevel
+TimeReport   0.000003     0.000003     0.000003  p
+TimeReport   0.000030     0.000051     0.000051  tagsDumper
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 XrdAdaptor           -w file_open                             12       12
+    2 fileAction           -s file_close                            12       12
+    3 fileAction           -s file_open                             24       24
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    2 fileAction           PostProcessEvent PostProcessEvent PostGlobalEndRun
+    3 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                12                  12
+System                 36                  36
+
+dropped waiting message count 0

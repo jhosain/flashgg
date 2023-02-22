@@ -1,0 +1,18 @@
+Could not find platform independent libraries <prefix>
+Could not find platform dependent libraries <exec_prefix>
+Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+ImportError: No module named site
+/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-requests/2.21.0-pafccj2/lib/python2.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.25.2) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+14-Sep-2022 22:47:10 CEST  Initiating request to open file root://cms-xrd-global.cern.ch//store/group/phys_higgs/cmshgg/alesauva/flashgg/UL2017/10_6_4/GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/UL2017-10_6_4-v0-RunIISummer19UL17MiniAOD-106X_mc2017_realistic_v6-v2/200514_143038/0000/myMicroAODOutputFile_4.root
+%MSG-w XrdAdaptor:  file_open 14-Sep-2022 22:47:13 CEST pre-events
+Data is served from cern.ch instead of original site CERN-CMSGLOBAL-01
+%MSG
+14-Sep-2022 22:47:20 CEST  Successfully opened file root://cms-xrd-global.cern.ch//store/group/phys_higgs/cmshgg/alesauva/flashgg/UL2017/10_6_4/GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/UL2017-10_6_4-v0-RunIISummer19UL17MiniAOD-106X_mc2017_realistic_v6-v2/200514_143038/0000/myMicroAODOutputFile_4.root
+14-Sep-2022 22:47:27 CEST  Closed file root://cms-xrd-global.cern.ch//store/group/phys_higgs/cmshgg/alesauva/flashgg/UL2017/10_6_4/GluGluHToGG_M125_TuneCP5_13TeV-amcatnloFXFX-pythia8/UL2017-10_6_4-v0-RunIISummer19UL17MiniAOD-106X_mc2017_realistic_v6-v2/200514_143038/0000/myMicroAODOutputFile_4.root
+----- Begin Fatal Exception 14-Sep-2022 22:47:27 CEST-----------------------
+An exception of category 'PluginLibraryLoadError' occurred while
+   [0] Constructing the EventProcessor
+Exception Message:
+unable to load /afs/cern.ch/user/j/jhossain/Hgg_AC_Analysis/Flashgg/Emanuele_Flashgg/CMSSW_10_6_29/lib/slc7_amd64_gcc700/pluginFlashggTaggersPlugins.so because libmcfm_707.so: cannot open shared object file: No such file or directory
+----- End Fatal Exception -------------------------------------------------

@@ -1,0 +1,34 @@
+{
+    "cont": false, 
+    "verbose": false, 
+    "ncondorcpu": 1, 
+    "jobExe": null, 
+    "resubmit_ids": "", 
+    "njobs": 200, 
+    "resubMissing": false, 
+    "selectedDatasetPatterns": null, 
+    "hadd": true, 
+    "cmdLine": "metaConditions=$CMSSW_BASE/src/flashgg/MetaData/data/MetaConditions/Era2017_legacy_v1.json campaign=Era2017_legacy_v1_Summer20UL useAAA=True lumiMask=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Legacy_2017/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt ", 
+    "stageCmd": "guess", 
+    "outputDir": "test_directory", 
+    "asyncLsf": true, 
+    "maxResub": 2, 
+    "ncpu": 10, 
+    "copy_proxy": false, 
+    "processes": {
+        "bkg": [
+            "/QCD_Pt-40ToInf_DoubleEMEnriched_MGG-80ToInf_TuneCP5_13TeV-pythia8"
+        ]
+    }, 
+    "useTarball": false, 
+    "stageTo": "/afs/cern.ch/user/j/jhossain/eos/Hgg_AC_analysis/Flashgg/Ntuple_Production/QCD_bkg/output", 
+    "__opts__": null, 
+    "hadd_dataset": false, 
+    "use_tarball": true, 
+    "__opts___src": "jj_jobs_2017.json", 
+    "queue": "workday", 
+    "hadd_process": true, 
+    "batchSystem": "htcondor", 
+    "output": "output.root", 
+    "lighttarball": false
+}

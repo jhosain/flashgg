@@ -210,7 +210,7 @@ process.flashggVBFMVA.DrJetPhoton   = cms.double(0.4) # this is the right number
 process.flashggVBFTag.Boundaries             = cms.vdouble(-2.0,2.0)
 process.flashggVBFTag.SetArbitraryNonGoldMC  = cms.bool(False)
 process.flashggVBFTag.DropNonGoldData        = cms.bool(False)
-process.flashggVBFTag.RequireVBFPreselection = cms.bool(False)
+process.flashggVBFTag.RequireVBFPreselection = cms.bool(True)
 #OPtions for MVA
 process.flashggVBFMVA.rmsforwardCut = cms.double(customize.forwardJetRMSCut)
 process.flashggVBFMVA.pujidWpPtBin1 = cms.vdouble(mva_wp[customize.pujidWP][0])
