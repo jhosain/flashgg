@@ -1,0 +1,17 @@
++JobFlavour   = "8nm"
+
++OnExitHold   = ExitStatus != 0 
+
+periodic_release =  (NumJobStarts < 4) && ((CurrentTime - EnteredCurrentStatus) > 60) 
+
+getenv        = True 
+input         = /afs/cern.ch/user/j/jhossain/.dasmaps/das_maps_dbs_prod.js 
+executable    = .fgg/job571.sh
+arguments     = $(ProcId)
+output        = .fgg/job571_$(ClusterId).$(ProcId).out
+error         = .fgg/job571_$(ClusterId).$(ProcId).err
+log           = .fgg/job571_$(ClusterId).$(ProcId)_htc.log
+
+RequestCpus   = 1
+max_retries   = 2
+queue 1 
