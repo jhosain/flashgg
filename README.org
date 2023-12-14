@@ -85,7 +85,7 @@
    mv cmgtools-lite/ CMGTools
    #+END_EXAMPLE
 
-   get flashgg:
+*** Get flashgg:
    #+BEGIN_EXAMPLE
 
    git clone https://github.com/jhosain/flashgg.git
@@ -101,11 +101,9 @@
    #+BEGIN_EXAMPLE
    cd $CMSSW_BASE/src
    scram b -j 4
-
-   cd flashgg
    #+END_EXAMPLE
 
-*** Make a setup enviroment by running setup_env.sh
+**** Make a setup enviroment by creating and running setup_env.sh
 
    #+BEGIN_EXAMPLE
    
@@ -119,6 +117,14 @@
    echo X509_USER_PROXY=/afs/cern.ch/user/j/jhossain/proxy/x509up.px
    export X509_USER_PROXY=/afs/cern.ch/user/j/jhossain/proxy/x509up.px
 
+   #+END_EXAMPLE
+
+
+*** Setup Environment and Proxy
+
+   #+BEGIN_EXAMPLE
+   cd flashgg
+   source setup_env.sh
    #+END_EXAMPLE
 
 ** Examples to run on RunII legacy test campaign:
