@@ -178,9 +178,44 @@
    If all jobs terminated successfully the script will display a success message, otherwise the monitoring will resume.
    The status of jobs can be also monitored running the standard HTCondor scripts like =condor_q=. fggRunJobs clusters are named "runJobsXX".
    The number of "manual" resubmission can be increase by adding =-m 3= to the above command.
-   
 
-** Manual tests:
+** Condor Job Submission
+
+**** An Example of condor job submission for GGH_AC studies
+
+   #+BEGIN_EXAMPLE
+   fggRunJobs.py --load $CMSSW_BASE/src/flashgg/Systematics/test/json_2018/ggH_SM_jobs_2018.json -d condor_run_MINLO_SM_2018 workspaceVbf.py maxEvents=-1 dumpWorkspace=False doSystematics=False applyNNLOPSweight=True recalculatePDFWeights=False doPdfWeights=False vbfTagsOnly=True dumpLHE=False melaEFT=False verboseTagDump=False useParentDataset=False dumpTrees=True copyInputMicroAOD=1 -H -P -n 200 -q testmatch --no-copy-proxy --no-use-tarball --stage-to=/afs/cern.ch/user/j/jhossain/eos/Hgg_AC_analysis/Flashgg/Ntuple_Production/MINLO_Ntuple_Prod/Prod_2018/SM
+   #+END_EXAMPLE
+
+*** Condor Usefull Commands
+
+   #+BEGIN_EXAMPLE
+   Ctrl+Z ## to quit the job submission
+   condor_q
+   condor_status
+   condor_rm “ID number”
+   #+END_EXAMPLE
+
+*** An example of Json file
+
+   #+BEGIN_EXAMPLE
+{		"cmdLine"  : "metaConditions=$CMSSW_BASE/src/flashgg/MetaData/data/MetaConditions/Era2017_legacy_v1.json campaign=Era2017_legacy_v1_Summer19UL useAAA=True lumiMask=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Legacy_2017/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt ",
+"processes": {
+    	"ggh"   : [ "/GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8" ]
+	}
+}
+   #+END_EXAMPLE
+
+
+*** Merging multiple root files into a file
+
+   #+BEGIN_EXAMPLE
+   hadd -f merged.root file0.root file1.root ... fileN.root
+   hadd -f output_GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8.root output_GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8_*.root
+   hadd -f output_GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8.root output_GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8_{0..39}.root
+   #+END_EXAMPLE
+
+** Local Run:
    And a very basic workflow test (for reference, this is not supposed to give paper-grade results):
    #+BEGIN_EXAMPLE
    cd $CMSSW_BASE/src/flashgg
@@ -190,6 +225,15 @@
 
    cmsRun Systematics/test/workspaceStd.py processId=ggh_125 doHTXS=1
    #+END_EXAMPLE
+
+** Example of Local run for GGH_AC studies
+
+   #+BEGIN_EXAMPLE
+   cd Systematics/test
+   cmsRun workspaceVbf.py processId=ggh_SM dumpWorkspace=False doSystematics=False metaConditions=$CMSSW_BASE/src/flashgg/MetaData    /data/MetaConditions/Era2018_legacy_v1.json dataset=/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8/jhossain-Era2018_legacy_v1_Summer20UL-v2-v0-RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2-55cfc58f8778b65886b5f1796cffaf22/USER campaign=Era2018_legacy_v1_Summer20UL_v2 lumiMask=/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Legacy_2018/Cert_314472-325175_13TeV_Legacy2018_Collisions18_JSON.txt useAAA=True maxEvents=100 applyNNLOPSweight=True recalculatePDFWeights=False doPdfWeights=False vbfTagsOnly=True dumpLHE=False melaEFT=False verboseTagDump=False useParentDataset=False dumpTrees=True
+   #+END_EXAMPLE
+
+   If the processIds are background then "applyNNLOPSweight" would be False
 
    These are just some test examples; the first makes MicroAOD from a MiniAOD file accessed via xrootd, 
    the second produces tag objects and screen output from the new MicroAOD file,
