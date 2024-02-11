@@ -442,8 +442,11 @@ class HTCondorJob(object):
             fout.write('output        = '+self.jobName+'_$(ClusterId).$(ProcId).out\n')
             fout.write('error         = '+self.jobName+'_$(ClusterId).$(ProcId).err\n')
             fout.write('log           = '+self.jobName+'_$(ClusterId).$(ProcId)_htc.log\n\n')
+	    fout.write('requirements = (OpSysAndVer =?= \"CentOS7\") \n')
             fout.write('RequestCpus   = {}\n'.format(self.ncondorcpu))
             fout.write('max_retries   = 2\n')
+	    fout.write('should_transfer_files = YES \n')
+            fout.write('when_to_transfer_output = ON_EXIT \n')
             fout.write('queue '+str(njobs)+' \n')
             fout.close()        
 
@@ -1372,3 +1375,4 @@ class Parallel:
         self.njobs -= njobs
         self.sem.release()
         return returns
+
