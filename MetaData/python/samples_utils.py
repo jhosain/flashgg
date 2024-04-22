@@ -137,9 +137,9 @@ class SamplesManager(object):
                 # response = das_query("https://cmsweb.cern.ch","dataset dataset=%s instance=%s | grep dataset.name" % (dataset, self.dbs_instance_), 0, 0, False, ckey=x509(), cert=x509())
                 # response = das_query("https://cmsweb.cern.ch","dataset dataset=%s instance=%s | grep dataset.name" % (dataset, self.dbs_instance_), 0, 0, False, ckey=x509(), cert=x509())
                 response = das_query("dataset dataset=%s instance=%s | grep dataset.name" % (dataset, self.dbs_instance_))
-                ## print response
+                print response
                 for d in response["data"]:
-                    ## print d
+                    print d
                     datasets.append( d["dataset"][0]["name"] )
             else:
                 datasets.append(dataset)

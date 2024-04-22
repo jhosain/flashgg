@@ -408,8 +408,8 @@ class HTCondorJob(object):
     def preamble(self):
         # fix to ensure AAA redirecting works properly on lxplus/lxbatch
         # see https://hypernews.cern.ch/HyperNews/CMS/get/wanaccess/448/1/1.html
-        return "export XRD_NETWORKSTACK=IPv4"
-
+        #return "export XRD_NETWORKSTACK=IPv4"
+        return ""
     #----------------------------------------
     def epilogue(self,cmd,dest):
         return ""
@@ -442,8 +442,12 @@ class HTCondorJob(object):
             fout.write('output        = '+self.jobName+'_$(ClusterId).$(ProcId).out\n')
             fout.write('error         = '+self.jobName+'_$(ClusterId).$(ProcId).err\n')
             fout.write('log           = '+self.jobName+'_$(ClusterId).$(ProcId)_htc.log\n\n')
+	    fout.write('requirements = (OpSysAndVer =?= \"CentOS7\") \n')
+            #fout.write('MY.WantOS = \"el7\" \n')
             fout.write('RequestCpus   = {}\n'.format(self.ncondorcpu))
             fout.write('max_retries   = 2\n')
+	    fout.write('should_transfer_files = YES \n')
+            fout.write('when_to_transfer_output = ON_EXIT \n')
             fout.write('queue '+str(njobs)+' \n')
             fout.close()        
 
@@ -1372,3 +1376,4 @@ class Parallel:
         self.njobs -= njobs
         self.sem.release()
         return returns
+
