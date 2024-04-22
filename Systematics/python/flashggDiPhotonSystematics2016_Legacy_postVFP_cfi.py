@@ -11,25 +11,25 @@ mvaShiftBins = cms.PSet(
                      )
     )
 
-# from Arnab via Martina 10/03/2017
+# from Prasant UL2016 PostVFP Preselections SFs:https://indico.cern.ch/event/1233746/contributions/5313197/attachments/2610373/4509837/Zee_Validation_UL2016_SA_Prasant.pdf
 preselBins = cms.PSet(
     variables = cms.vstring("abs(superCluster.eta)","full5x5_r9"),
     bins = cms.VPSet(
-        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.0 ) , upBounds = cms.vdouble( 1.5, 0.85 ) , values = cms.vdouble( 1.0057 ) , uncertainties = cms.vdouble( 0.0010 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.85 ), upBounds = cms.vdouble( 1.5, 999. ) , values = cms.vdouble( 0.9988 ) , uncertainties = cms.vdouble( 0.0009 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.0 ) , upBounds = cms.vdouble( 6.0, 0.9  ) , values = cms.vdouble( 0.9443 ) , uncertainties = cms.vdouble( 0.0072 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.9 ) , upBounds = cms.vdouble( 6.0, 999. ) , values = cms.vdouble( 0.9947 ) , uncertainties = cms.vdouble( 0.0051 )  ) 
+        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.0 ) , upBounds = cms.vdouble( 1.5, 0.85 ) , values = cms.vdouble( 0.9984 ) , uncertainties = cms.vdouble( 0.0258 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.85 ), upBounds = cms.vdouble( 1.5, 999. ) , values = cms.vdouble( 0.9978 ) , uncertainties = cms.vdouble( 0.0039 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.0 ) , upBounds = cms.vdouble( 6.0, 0.9  ) , values = cms.vdouble( 1.0064 ) , uncertainties = cms.vdouble( 0.0192 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.9 ) , upBounds = cms.vdouble( 6.0, 999. ) , values = cms.vdouble( 1.0049 ) , uncertainties = cms.vdouble( 0.0024 )  ) 
         )
     )
 
-# JTao: slide 40 of https://indico.cern.ch/event/850506/contributions/3606914/attachments/1927946/3192290/201910_Zmmg_RhoBugFixed.pdf with 2016 legacy data and MC samples, with new shower-shape and isolation corrections applied and photon PT > 20 GeV 
+# JTao: slide 24 of https://indico.cern.ch/event/1201810/contributions/5103257/attachments/2532365/4357414/UL2016_Zmmg_ForHgg.pdf with preVFP+postVFP combined as agreed, since the difference < 1 sigma of the unc 
 electronVetoBins = cms.PSet(
     variables = cms.vstring("abs(superCluster.eta)","full5x5_r9"),
     bins = cms.VPSet(
-        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.00 ) , upBounds = cms.vdouble( 1.5, 0.85 ) , values = cms.vdouble( 0.9973 ) , uncertainties = cms.vdouble( 0.0024 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.85 ) , upBounds = cms.vdouble( 1.5, 999. ) , values = cms.vdouble( 0.9963 ) , uncertainties = cms.vdouble( 0.0006 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.00 ) , upBounds = cms.vdouble( 6.0, 0.90 ) , values = cms.vdouble( 0.9700 ) , uncertainties = cms.vdouble( 0.0075 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.90 ) , upBounds = cms.vdouble( 6.0, 999. ) , values = cms.vdouble( 0.9909 ) , uncertainties = cms.vdouble( 0.0018 )  ) 
+        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.00 ) , upBounds = cms.vdouble( 1.5, 0.85 ) , values = cms.vdouble( 1.0004 ) , uncertainties = cms.vdouble( 0.0021 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.85 ) , upBounds = cms.vdouble( 1.5, 999. ) , values = cms.vdouble( 0.9976 ) , uncertainties = cms.vdouble( 0.0005 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.00 ) , upBounds = cms.vdouble( 6.0, 0.90 ) , values = cms.vdouble( 0.9882 ) , uncertainties = cms.vdouble( 0.0072 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.90 ) , upBounds = cms.vdouble( 6.0, 999. ) , values = cms.vdouble( 0.9971 ) , uncertainties = cms.vdouble( 0.0016 )  )
         )
     )
 
@@ -253,14 +253,14 @@ subleadTriggerScaleBins = cms.PSet(
 
 
 
-# from Arnab via Martina 10/03/2016                                                                                                                               
+# from Prasant UL2016 PostVFP Loose IDMVA SFS:https://indico.cern.ch/event/1233746/contributions/5313197/attachments/2610373/4509837/Zee_Validation_UL2016_SA_Prasant.pdf                      
 looseMvaBins = cms.PSet(
     variables = cms.vstring("abs(superCluster.eta)","full5x5_r9"),
     bins = cms.VPSet(
-        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.0  ) , upBounds = cms.vdouble( 1.5, 0.85  ) , values = cms.vdouble( 0.9999 ) , uncertainties = cms.vdouble( 0.0001 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.85 ) , upBounds = cms.vdouble( 1.5, 999.0 ) , values = cms.vdouble( 1.0003 ) , uncertainties = cms.vdouble( 0.0000 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.0  ) , upBounds = cms.vdouble( 6.0, 0.9   ) , values = cms.vdouble( 1.0003 ) , uncertainties = cms.vdouble( 0.0000 )  ) ,
-        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.9  ) , upBounds = cms.vdouble( 6.0, 999.0 ) , values = cms.vdouble( 1.0004 ) , uncertainties = cms.vdouble( 0.0000 )  ) 
+        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.0  ) , upBounds = cms.vdouble( 1.5, 0.85  ) , values = cms.vdouble( 0.9981 ) , uncertainties = cms.vdouble( 0.0031 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 0.0, 0.85 ) , upBounds = cms.vdouble( 1.5, 999.0 ) , values = cms.vdouble( 0.9991 ) , uncertainties = cms.vdouble( 0.0038 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.0  ) , upBounds = cms.vdouble( 6.0, 0.9   ) , values = cms.vdouble( 0.9997 ) , uncertainties = cms.vdouble( 0.0025 )  ) ,
+        cms.PSet( lowBounds = cms.vdouble( 1.5, 0.9  ) , upBounds = cms.vdouble( 6.0, 999.0 ) , values = cms.vdouble( 1.0005 ) , uncertainties = cms.vdouble( 0.0021 )  ) 
         )
     )
 
@@ -390,7 +390,7 @@ emptySigma = cms.PSet(
     secondVar = cms.vint32()
 )
 
-scalesAndSmearingsPrefix = cms.string("EgammaAnalysis/ElectronTools/data/ScalesSmearings/Legacy2016_07Aug2017_FineEtaR9_v3_ele_unc")
+scalesAndSmearingsPrefix = cms.string("EgammaAnalysis/ElectronTools/data/ScalesSmearings/Run2016_UltraLegacy_postVFP_RunFineEtaR9Gain_v1")
 #scalesAndSmearingsPrefixForSigmaEOverE = scalesAndSmearingsPrefix
 #cms.string("EgammaAnalysis/ElectronTools/data/ScalesSmearings/Legacy2016_07Aug2017_pho_unc")
 
@@ -590,7 +590,7 @@ MvaShift = cms.PSet( PhotonMethodName = cms.string("FlashggPhotonMvaTransform"),
           Label = cms.string("MvaShift"),
           NSigmas = cms.vint32(-1,1),
           OverallRange = cms.string("1"),
-          CorrectionFile = cms.FileInPath("flashgg/Systematics/data/SystematicsIDMVA_LegRunII_v1_2016.root"),
+          CorrectionFile = cms.FileInPath("flashgg/Systematics/data/SystematicsIDMVA_UL16PostVFP.root"),
           BinList = mvaShiftBins,
           Debug = cms.untracked.bool(False),
           ApplyCentralValue = cms.bool(False)

@@ -30,9 +30,9 @@ class AnomalousCouplingsCustomize():
             "CMS_hgg_mass[160,100,180]:=diPhoton().mass",
             "dZ[40,-20.,20.]:=(tagTruth().genPV().z-diPhoton().vtx().z)",
             "NNLOPSweight[1,-999999.,999999.] := tagTruth().weight(\"NNLOPSweight\")",
-            "btagReshapeNorm_TTH_LEP[1,-999999.,999999.] := weight(\"btagReshapeNorm_TTH_LEP\")",
-            "btagReshapeNorm_TTH_HAD[1,-999999.,999999.] := weight(\"btagReshapeNorm_TTH_HAD\")",
-            "btagReshapeNorm_THQ_LEP[1,-999999.,999999.] := weight(\"btagReshapeNorm_THQ_LEP\")",
+#            "btagReshapeNorm_TTH_LEP[1,-999999.,999999.] := weight(\"btagReshapeNorm_TTH_LEP\")",
+#            "btagReshapeNorm_TTH_HAD[1,-999999.,999999.] := weight(\"btagReshapeNorm_TTH_HAD\")",
+#            "btagReshapeNorm_THQ_LEP[1,-999999.,999999.] := weight(\"btagReshapeNorm_THQ_LEP\")",
             "centralObjectWeight[1,-999999.,999999.] := centralWeight"
         ]
 
@@ -62,21 +62,76 @@ class AnomalousCouplingsCustomize():
 
         allNonSigVariables = var.dipho_variables + var.dijet_variables + more_jet_vars + VBF_mva_probs
 
-        ntup_variables = ws_variables + allNonSigVariables if is_signal else allNonSigVariables
+        ntup_variables = ws_variables + allNonSigVariables 
     
-        if self.customize.dumpWorkspace:
-            return ws_variables
-        else:
-            return ntup_variables
+        return ntup_variables
 
 
     def systematicVariables(self):
         systematicVariables = [] 
         systematicVariables += self.acVariable 
         systematicVariables += [
-            "CMS_hgg_mass[160,100,180]:=diPhoton().mass"
+            "CMS_hgg_mass[160,100,180]:=diPhoton().mass",
+            "dZ[40,-20.,20.]:=(tagTruth().genPV().z-diPhoton().vtx().z)",
+            "NNLOPSweight[1,-999999.,999999.] := tagTruth().weight(\"NNLOPSweight\")",
+            "centralObjectWeight[1,-999999.,999999.] := centralWeight"
+
         ]
-        return systematicVariables
+
+        import flashgg.Taggers.VBFTagVariables as var
+
+        new_variables = [
+            "dipho_pt             := diPhoton.pt",
+            "dijet_pt             := VBFMVA.dijet_pt",
+        ]
+
+        more_jet_vars = [
+            "n_rec_jets               := GluGluHMVA.n_rec_jets",
+            "dijet_leadPhi            := GluGluHMVA.dijet_leadPhi",
+            "dijet_subleadPhi         := GluGluHMVA.dijet_subleadPhi",
+            "dijet_leadPUMVA          := GluGluHMVA.dijet_leadPUMVA",
+            "dijet_subleadPUMVA       := GluGluHMVA.dijet_subleadPUMVA",
+        ]
+
+        VBF_mva_probs = [
+            "vbfMvaResult_prob_bkg := VBFMVA.vbfMvaResult_prob_bkg()",
+            "vbfMvaResult_prob_ggH := VBFMVA.vbfMvaResult_prob_ggH()",
+            "vbfMvaResult_prob_VBF := VBFMVA.vbfMvaResult_prob_VBF()",
+            "vbfDNN_pbkg := VBFMVA.vbfDnnResult_prob_bkg()",
+            "vbfDNN_psm  := VBFMVA.vbfDnnResult_prob_sm()",
+            "vbfDNN_pbsm := VBFMVA.vbfDnnResult_prob_bsm()",
+            "D0minus     := VBFMVA.D0minus()",
+        ]
+        
+        syst_variables = [
+            "dipho_mva              :=  diPhotonMVA.mvaValue()",
+            "D0_minus_ggH           :=  VBFMVA.mela_D0_ggH_value()",
+            "dipho_mass             := diPhoton.mass",
+            "dipho_cosphi           := abs(cos(diPhoton.leadingPhoton.phi - diPhoton.subLeadingPhoton.phi))",
+            "dipho_leadIDMVA        := diPhoton.leadingView.phoIdMvaWrtChosenVtx",
+            "dipho_subleadIDMVA     := diPhoton.subLeadingView.phoIdMvaWrtChosenVtx",
+            "dipho_lead_ptoM        := diPhoton.leadingPhoton.pt/diPhoton.mass",
+            "dipho_sublead_ptoM     := diPhoton.subLeadingPhoton.pt/diPhoton.mass",
+            "dipho_leadEta          := diPhoton.leadingPhoton.eta",
+            "dipho_subleadEta       := diPhoton.subLeadingPhoton.eta",
+            "dijet_zep              :=  VBFMVA.dijet_Zep",
+            "dijet_minDRJetPho      :=  VBFMVA.dijet_minDRJetPho",
+            "dijet_abs_dEta         :=  abs(VBFMVA.dijet_leadEta - VBFMVA.dijet_subleadEta)",
+            "dijet_leadEta          :=  VBFMVA.dijet_leadEta    ",
+            "dijet_subleadEta       :=  VBFMVA.dijet_subleadEta ",
+            "dijet_leadPt           :=  VBFMVA.dijet_LeadJPt    ",
+            "dijet_subleadPt        :=  VBFMVA.dijet_SubJPt     ",
+            "dijet_Mjj              :=  VBFMVA.dijet_Mjj        ",
+            "dijet_leadPhi          := GluGluHMVA.dijet_leadPhi",
+            "dijet_subleadPhi       := GluGluHMVA.dijet_subleadPhi"
+        ]
+
+        allNonSigVariables = var.dipho_variables + var.dijet_variables + more_jet_vars + VBF_mva_probs
+        ntup_variables = systematicVariables + allNonSigVariables 
+        systematic_Variables = systematicVariables + syst_variables
+
+        return ntup_variables
+        #return systematic_Variables
 
     def noTagVariables(self):
         noTagVariables = []
