@@ -603,7 +603,7 @@ namespace flashgg {
 
             // saving the collection
             //0 jet categorization
-            if(tag_obj.VBFMVA().dijet_LeadJPt < 30.0 && tag_obj.VBFMVA().dijet_SubJPt < 30.0){
+            /*   if(tag_obj.VBFMVA().dijet_LeadJPt < 30.0 && tag_obj.VBFMVA().dijet_SubJPt < 30.0){
                 tag_obj.setCategoryNumber(0);
                 tags->push_back( tag_obj );
                 if( ! evt.isRealData() ) {
@@ -619,9 +619,10 @@ namespace flashgg {
                              truths->push_back( truth_obj );
                              tags->back().setTagTruth( edm::refToPtr( edm::Ref<vector<VBFTagTruth> >( rTagTruth, idx++ ) ) );
                  }
-            }
+            } 
+            */
             // >=2 jet categorization
-            else if(tag_obj.VBFMVA().dijet_LeadJPt > 30.0 && tag_obj.VBFMVA().dijet_SubJPt > 30.0){
+                if(tag_obj.VBFMVA().dijet_LeadJPt > 30.0 && tag_obj.VBFMVA().dijet_SubJPt > 30.0){
                 tag_obj.setCategoryNumber(2);
                 tags->push_back( tag_obj );
                 if( ! evt.isRealData() ) {
